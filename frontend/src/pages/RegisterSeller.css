@@ -1,0 +1,50 @@
+/* Asegúrate de que el html y body ocupen todo el alto */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .register-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: 100%; /* importante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 110px;
+  }
+
+  .register-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Superposición oscura */
+  z-index: 1;
+}
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* cubre todo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+  

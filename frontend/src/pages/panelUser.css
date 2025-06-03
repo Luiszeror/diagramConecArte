@@ -1,0 +1,86 @@
+.panel-user-fondo {
+  position: relative; /* Necesario para que ::before funcione correctamente */
+  background-image: url('../assets/leopard.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 80px;
+  z-index: 0; /* más bajo que el contenido */
+  overflow: hidden; /* asegura que no se desborde */
+}
+
+.panel-user-fondo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1; /* detrás del contenido, pero visible */
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.precio-rojo {
+  color: red;
+  font-weight: bold;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botón flotante */
+.carrito-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  padding: 0.75rem 0.85rem;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.titulo-carrito {
+  color: #ffc107; /* amarillo vivo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.total-carrito {
+  color: #ffc107;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.card-bienvenido{
+
+  margin-top: 30px;
+
+}
+

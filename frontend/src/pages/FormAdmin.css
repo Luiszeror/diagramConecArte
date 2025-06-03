@@ -1,0 +1,67 @@
+/* FormAdmin.css */
+
+.admin-overlay {
+  background-image: url('../assets/pendiente5.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.admin-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.admin-title {
+  color: #ffc107;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+.admin-table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.admin-table thead {
+  background-color: #343a40;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.admin-table td, .admin-table th {
+  vertical-align: middle;
+}
+
+.admin-button {
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+ .btn-home-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffc107; /* amarillo */
+  color: black;
+  border-radius: 50%;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-home-float:hover {
+  transform: scale(1.1);
+  background-color: #e0a800;
+}

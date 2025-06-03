@@ -1,0 +1,72 @@
+.perfil-container {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../assets/pendiente1.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 80px; /* igual que .panel-user-fondo */
+  overflow: hidden; /* ✅ Mantenlo si NO quieres scroll global */
+   z-index: 2; 
+}
+
+
+.perfil-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1; /* detrás del contenido, pero visible */
+}
+
+
+.perfil-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(59, 59, 59, 0.85);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: none;
+
+  max-height: 75vh; /* limita la altura a 75% de la ventana */
+  overflow-y: auto; /* agrega scroll vertical interno */
+}
+
+
+.perfil-card h4 {
+  text-shadow: 2px 2px 8px black;
+  margin-bottom: 1.5rem;
+}
+
+.bandera-textoo {
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 2rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+.bandera-textoo p {
+  margin: 0;
+}
+
+/* Botón flotante */
+.buzon-float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  padding: 14px 18px;
+  font-size: 20px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.buzon-float-button:hover {
+  transform: scale(1.1);
+}

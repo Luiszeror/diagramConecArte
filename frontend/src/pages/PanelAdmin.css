@@ -1,0 +1,29 @@
+.admin-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* oscurece el fondo */
+}
+ .btn-home-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffc107; /* amarillo */
+  color: black;
+  border-radius: 50%;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-home-float:hover {
+  transform: scale(1.1);
+  background-color: #e0a800;
+}

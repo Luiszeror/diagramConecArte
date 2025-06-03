@@ -1,0 +1,63 @@
+.panel-seller-overlay {
+  background: url('../assets/pendiente5.webp') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  padding: 20px;
+  margin-top: 50px; /* Ajusta esta cantidad según la altura del navbar */
+}
+
+.panel-seller-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.precio-rojo {
+  color: #d9534f;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mis-tiendas-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50px;
+}
+
+.buzon-btn {
+  position: fixed;
+  bottom: 80px; /* más arriba que el de "Mis Tiendas" */
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50px;
+}
+

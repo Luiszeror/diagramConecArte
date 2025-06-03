@@ -1,0 +1,104 @@
+.home-container {
+  position: relative;
+  height: 100vh; /* Altura fija a la pantalla */
+  background-image: url('../assets/inicio.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.98;
+  overflow: hidden; /* 🔒 Evita cualquier scroll */
+  background-position: center 20%;
+    z-index: 2;
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad aquí */
+  z-index: 1;
+}
+
+.home-text-container {
+  padding-top: 25vh; /* Puedes ajustar a 25vh, 30vh, etc. según lo que necesites */
+  position: relative;
+  z-index: 2;
+}
+
+.text-yellow {
+  color: #FFD700;
+}
+
+.text-blue {
+  color: #0033A0;
+}
+
+.text-red {
+  color: #CE1126;
+}
+
+.white-shadow-text {
+  color: white;
+  font-weight: bold;  /* Aquí agregas la negrita */
+}
+
+.bandera-texto {
+  font-size: 10vw !important;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+}
+
+@media (min-width: 1600px) {
+  .bandera-texto {
+    font-size: 70px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .bandera-texto {
+    font-size: 8vw !important;
+  }
+}
+
+.acerca-footer {
+  
+  margin-top: 100px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.link-footer {
+  color: #888;
+  text-decoration: none;
+}
+
+.link-footer:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+.acerca-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.titulo-acerca {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.texto-acerca {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+

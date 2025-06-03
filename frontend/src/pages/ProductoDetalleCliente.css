@@ -1,0 +1,96 @@
+/* Fondo general */
+.producto-detalle-fondo {
+  background-image: url('../assets/tienda.webp'); /* opcional */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor principal con flex para producto y reseñas */
+.producto-detalle-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Columna del producto */
+.producto-detalle-info {
+  flex: 1 1 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Columna de reseñas */
+.producto-detalle-reseñas {
+  flex: 1 1 350px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Entrada de cantidad */
+.cantidad-input {
+  width: 100px;
+}
+
+/* Botón flotante perfil */
+.perfil-float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Estilos para cada reseña */
+.reseña-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  .producto-detalle-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto-detalle-info,
+  .producto-detalle-reseñas {
+    width: 100%;
+  }
+
+  .perfil-float-button {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+}
